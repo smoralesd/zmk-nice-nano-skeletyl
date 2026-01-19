@@ -14,7 +14,8 @@ url: https://example.com
 # See https://zmk.dev/docs/development/hardware-integration/hardware-metadata-files#features
 features:
   - keys
-  - studio  # Remove this line if your keyboard will not support ZMK Studio
+  - dongle
+  - studio # Remove this line if your keyboard will not support ZMK Studio
 
 requires:
   - pro_micro
@@ -22,3 +23,4 @@ requires:
 siblings:
   - skeletyl_left
   - skeletyl_right
+  - skeletyl_dongle
