@@ -6,7 +6,7 @@
 
 &default_transform {
     // Set this to the number of columns on the left side.
-    col-off5et = <5>;
+    col-offset = <5>;
 };
 
 &kscan {
