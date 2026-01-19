@@ -12,8 +12,10 @@
 
         default_layer {
             bindings = <
-                &kp N1 &kp N2    &kp N3 &kp N4
-                &kp A  &kp B     &kp C  &kp D
+                &kp Q  &kp D  &kp R   &kp W     &kp B      &kp J     &kp F    &kp U     &kp P   &kp SQT
+                &kp A  &kp S  &kp H   &kp T     &kp G      &kp Y     &kp N    &kp E     &kp O   &kp I
+                &kp Z  &kp X  &kp M   &kp C     &kp V      &kp K     &kp L    &kp COMMA &kp DOT &kp SLASH
+                              &kp ESC &kp SPACE &kp TAB    &kp ENTER &kp BSPC &kp DEL
             >;
         };
     };
