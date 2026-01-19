@@ -19,7 +19,14 @@
 #
 ---
 include:
+  - board: seeeduino_xiao_ble
+    shield: skeletyl_dongle dongle_screen
+    artifact-name: dongle-screen
   - board: nice_nano_v2
     shield: skeletyl_left
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: split-dongle-left
   - board: nice_nano_v2
     shield: skeletyl_right
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: split-dongle-right
