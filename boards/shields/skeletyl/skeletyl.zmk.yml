@@ -18,7 +18,7 @@ features:
   - studio # Remove this line if your keyboard will not support ZMK Studio
 
 requires:
-  - pro_micro
+  - [pro_micro]
 
 siblings:
   - skeletyl_left
