@@ -19,6 +19,7 @@ features:
 
 requires:
   - [pro_micro]
+  - [seeeduino_xiao_ble]
 
 siblings:
   - skeletyl_left

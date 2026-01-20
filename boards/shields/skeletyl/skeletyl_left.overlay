@@ -9,6 +9,7 @@
     // appropriate driver and update the properties below to match.
     // See https://zmk.dev/docs/config/kscan for supported key scan drivers.
     compatible = "zmk,kscan-gpio-matrix";
+    wakeup-source;
     // Replace these comments with the GPIO pins in the matrix for the left side.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#shield-overlays
     col-gpios
