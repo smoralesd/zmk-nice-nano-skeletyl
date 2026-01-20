@@ -11,10 +11,10 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3 # the dongle only works on this version of zmk
+      revision: v0.3.0 # the dongle only works on this version of zmk
       import: app/west.yml
     - name: zmk-dongle-screen
       remote: janpfischer
-      revision: main
+      revision: 0.1.2
   self:
     path: config
