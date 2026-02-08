@@ -5,9 +5,13 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    &mt {
-      tapping-term-ms = <250>;
-    };
+    behaviors {
+      mt: mod_tap  {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = "tap-preferred"
+        tapping-term-ms = <250>;
+      };
+    }
 
     macros {
       lambda: lambda {
