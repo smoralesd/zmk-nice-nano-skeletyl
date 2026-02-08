@@ -5,6 +5,10 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    &mt {
+      tapping-term-ms = <250>;
+    };
+
     macros {
       lambda: lambda {
         compatible = "zmk,behavior-macro";
