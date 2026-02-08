@@ -5,6 +5,32 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+      lambda: lambda {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+          = <&macro_tap &kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp LBRC &kp RBRC>
+          ;
+      };
+
+      arrow: arrow {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+          = <&macro_tap &kp EQUAL &kp GT>
+          ;
+      };
+
+      func: func {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+          = <&macro_tap &kp LPAR &kp RPAR &kp SPACE &kp LBRC &kp RBRC>
+          ;
+      };
+    };
+
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
     keymap {
@@ -16,7 +42,7 @@
                 &kp Q      &kp D      &kp R       &kp W        &kp B        &kp J        &kp F         &kp U        &kp P       &kp SQT
                 &mt LGUI A &mt LALT S &mt LCTRL H &mt LSHFT T  &kp G        &kp Y        &mt LSHFT N   &mt LCTRL E  &mt LALT O  &mt LGUI I
                 &kp Z      &kp X      &kp M       &kp C        &kp V        &kp K        &kp L         &kp COMMA    &kp DOT     &kp SLASH
-                                      &lt 1 ESC   &lt 2 SPACE  &kp TAB      &lt 3 ENTER  &lt 4 BSPC    &lt 5 DEL
+                                      &lt 1 ESC   &lt 2 SPACE  &lt 3 TAB    &lt 4 ENTER  &lt 5 BSPC    &lt 6 DEL
             >;
         };
 
@@ -37,6 +63,16 @@
                 &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT     &none      &kp LEFT     &kp DOWN    &kp UP     &kp RIGHT   &none
                 &none     &kp RALT  &none       &none         &none      &kp HOME     &kp PG_DN   &kp PG_UP  &kp END     &kp INS
                                     &none       &none         &none      &kp ENTER    &kp BSPC    &kp DEL
+            >;
+        };
+
+        macros_layer {
+            display-name = "Macros";
+            bindings = <
+                &none     &none     &none       &none         &none      &none        &none       &none      &none       &none
+                &none     &none     &none       &none         &none      &none        &arrow      &lambda    &func       &none
+                &none     &none     &none       &none         &none      &none        &none       &none      &none       &none
+                                    &none       &none         &none      &mo 7        &none       &none
             >;
         };
 
@@ -67,6 +103,16 @@
                 &kp F11   &kp F4    &kp F5      &kp F6        &none         &none        &kp LSHFT   &kp LCTRL  &kp LALT    &kp LGUI
                 &kp F10   &kp F1    &kp F2      &kp F3        &none         &none        &none       &none      &kp RALT    &none
                                     &kp K_APP   &kp SPACE     &kp TAB       &none        &none       &none
+            >;
+        };
+
+        system_layer {
+            display-name = "Sys";
+            bindings = <
+                &sys_reset &none     &none       &none         &none      &none        &none       &none      &none       &bootloader
+                &none      &none     &none       &none         &none      &none        &none       &none      &none       &none
+                &none      &none     &none       &none         &none      &none        &none       &none      &none       &none
+                                     &none       &none         &none      &none        &none       &none
             >;
         };
     };
