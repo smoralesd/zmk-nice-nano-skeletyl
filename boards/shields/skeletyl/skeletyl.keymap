@@ -11,6 +11,10 @@
         flavor = "tap-preferred";
         tapping-term-ms = <250>;
       };
+
+      lt: layer_tap {
+        quick-tap-ms = <150>;
+      };
     };
 
     macros {
